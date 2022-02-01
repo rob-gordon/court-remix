@@ -1,15 +1,26 @@
 import {
   Links,
+  LinksFunction,
   LiveReload,
   Meta,
   Outlet,
   Scripts,
-  ScrollRestoration
+  ScrollRestoration,
 } from "remix";
 import type { MetaFunction } from "remix";
+import css from "../node_modules/court.css/dist/court.css";
 
 export const meta: MetaFunction = () => {
   return { title: "New Remix App" };
+};
+
+export const links: LinksFunction = () => {
+  return [
+    {
+      rel: "stylesheet",
+      href: css,
+    },
+  ];
 };
 
 export default function App() {

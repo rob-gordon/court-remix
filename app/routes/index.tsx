@@ -1,7 +1,11 @@
+import CourtComponent from "court.css";
+
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
+      <CourtComponent as="span" $c="orangered">
+        Welcome to Remix
+      </CourtComponent>
       <ul>
         <li>
           <a
